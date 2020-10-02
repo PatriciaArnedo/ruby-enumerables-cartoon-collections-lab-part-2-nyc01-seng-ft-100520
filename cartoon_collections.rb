@@ -29,8 +29,7 @@ def find_valid_calls(planeteer_calls)
   count = 0 
   while count < valid_calls.length do
     if planeteer_calls.any? {|word| word == valid_calls[count]}
-      return word
-    end
+      return planeteer_calls.find {|word| word == valid_calls[count]}
     count +=1
   end
 end
